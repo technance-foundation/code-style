@@ -1,2 +1,2 @@
-export { PrettierGeneralOptions } from "./prettier/general";
-export { PrettierTailwindOptions } from "./prettier/tailwind";
+export { type PrettierGeneralOptions } from "./prettier/general";
+export { type PrettierTailwindOptions } from "./prettier/tailwind";

@@ -33,6 +33,9 @@
             "import": "./src/prettier/tailwind.cjs",
             "types": "./src/prettier/tailwind.d.ts",
             "require": "./src/prettier/tailwind.cjs"
+        },
+        "./types": {
+            "types": "./src/types.d.ts"
         }
     },
     "files": [
