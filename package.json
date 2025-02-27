@@ -9,12 +9,17 @@
         "url": "git+https://github.com/invexa-foundation/code-style.git"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "release": "np --no-release-draft",
+        "release:preview": "np prerelease --any-branch --no-release-draft --tag=preview"
     },
     "keywords": [],
     "author": "Invexa <dev@invexa.io>",
     "license": "UNLICENSED",
     "dependencies": {
         "prettier": "^3.5.2"
+    },
+    "devDependencies": {
+        "np": "^10.2.0"
     }
 }
