@@ -10,8 +10,14 @@
     },
     "exports": {
         "./prettier": "./src/prettier/general.cjs",
-        "./prettier/general": "./src/prettier/general.cjs",
-        "./prettier/tailwind": "./src/prettier/tailwind.cjs"
+        "./prettier/general": {
+            "import": "./src/prettier/general.cjs",
+            "types": "./src/prettier/general.d.ts"
+        },
+        "./prettier/tailwind": {
+            "import": "./src/prettier/tailwind.cjs",
+            "types": "./src/prettier/tailwind.d.ts"
+        }
     },
     "files": [
         "src"
