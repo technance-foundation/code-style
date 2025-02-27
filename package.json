@@ -13,5 +13,8 @@
     },
     "keywords": [],
     "author": "Invexa <dev@invexa.io>",
-    "license": "UNLICENSED"
+    "license": "UNLICENSED",
+    "dependencies": {
+        "prettier": "^3.5.2"
+    }
 }
