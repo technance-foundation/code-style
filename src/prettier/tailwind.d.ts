@@ -1,7 +1,7 @@
 import { Config } from "prettier";
 import { PluginOptions } from "prettier-plugin-tailwindcss";
 
-interface PrettierTailwindOptions extends Config, PluginOptions {}
+export interface PrettierTailwindOptions extends Config, PluginOptions {}
 
 const prettierTailwind: PrettierTailwindOptions;
 

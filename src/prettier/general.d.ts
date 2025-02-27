@@ -1,6 +1,6 @@
 import { Config } from "prettier";
 
-interface PrettierGeneralOptions extends Config {}
+export interface PrettierGeneralOptions extends Config {}
 
 const prettierGeneral: PrettierGeneralOptions;
 
