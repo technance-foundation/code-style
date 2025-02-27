@@ -1,5 +1,6 @@
 {
     "name": "@invexa/code-style",
+    "type": "module",
     "version": "0.0.0",
     "description": "📏 Invexa code-style: Unified ESLint & Prettier configs for React, Next.js & Nest.js projects",
     "main": "index.js",
