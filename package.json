@@ -8,6 +8,16 @@
         "type": "git",
         "url": "git+https://github.com/invexa-foundation/code-style.git"
     },
+    "typesVersions": {
+        "*": {
+            "prettier/general": [
+                "src/prettier/general.d.ts"
+            ],
+            "prettier/tailwind": [
+                "src/prettier/tailwind.d.ts"
+            ]
+        }
+    },
     "exports": {
         "./prettier": "./src/prettier/general.cjs",
         "./prettier/general": {
