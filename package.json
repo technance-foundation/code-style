@@ -1,20 +1,32 @@
 {
     "name": "@invexa/code-style",
     "type": "module",
-    "version": "0.0.0",
+    "version": "0.0.1-0",
     "description": "📏 Invexa code-style: Unified ESLint & Prettier configs for React, Next.js & Nest.js projects",
     "main": "index.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/invexa-foundation/code-style.git"
     },
+    "exports": {
+        "./prettier": "./src/prettier/general.cjs",
+        "./prettier/general": "./src/prettier/general.cjs"
+    },
+    "files": [
+        "src"
+    ],
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 0",
+        "release": "np --no-release-draft",
+        "release:preview": "np prerelease --any-branch --no-release-draft --tag=preview"
     },
     "keywords": [],
     "author": "Invexa <dev@invexa.io>",
     "license": "UNLICENSED",
     "dependencies": {
         "prettier": "^3.5.2"
+    },
+    "devDependencies": {
+        "np": "^10.2.0"
     }
 }
