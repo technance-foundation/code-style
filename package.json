@@ -27,6 +27,7 @@
         "prettier": "^3.5.2"
     },
     "devDependencies": {
-        "np": "^10.2.0"
+        "np": "^10.2.0",
+        "typescript": "^5.7.3"
     }
 }
