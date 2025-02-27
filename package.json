@@ -1,16 +1,42 @@
 {
     "name": "@invexa/code-style",
     "type": "module",
-    "version": "0.1.0",
+    "version": "0.1.1-5",
     "description": "📏 Invexa code-style: Unified ESLint & Prettier configs for React, Next.js & Nest.js projects",
-    "main": "index.js",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/invexa-foundation/code-style.git"
     },
+    "typesVersions": {
+        "*": {
+            "prettier/general": [
+                "src/prettier/general.d.ts"
+            ],
+            "prettier/tailwind": [
+                "src/prettier/tailwind.d.ts"
+            ]
+        }
+    },
+    "main": "./src/index.cjs",
     "exports": {
+        ".": {
+            "import": "./src/index.js",
+            "require": "./src/index.cjs"
+        },
         "./prettier": "./src/prettier/general.cjs",
-        "./prettier/general": "./src/prettier/general.cjs"
+        "./prettier/general": {
+            "import": "./src/prettier/general.cjs",
+            "types": "./src/prettier/general.d.ts",
+            "require": "./src/prettier/general.cjs"
+        },
+        "./prettier/tailwind": {
+            "import": "./src/prettier/tailwind.cjs",
+            "types": "./src/prettier/tailwind.d.ts",
+            "require": "./src/prettier/tailwind.cjs"
+        },
+        "./types": {
+            "types": "./src/types.d.ts"
+        }
     },
     "files": [
         "src"
@@ -24,9 +50,11 @@
     "author": "Invexa <dev@invexa.io>",
     "license": "UNLICENSED",
     "dependencies": {
-        "prettier": "^3.5.2"
+        "prettier": "^3.5.2",
+        "prettier-plugin-tailwindcss": "^0.6.11"
     },
     "devDependencies": {
-        "np": "^10.2.0"
+        "np": "^10.2.0",
+        "typescript": "^5.7.3"
     }
 }
