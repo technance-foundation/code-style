@@ -1,0 +1,12 @@
+{
+    "name": "@invexa/code-style",
+    "version": "0.0.0",
+    "description": "📏 Invexa code-style: Unified ESLint & Prettier configs for React, Next.js & Nest.js projects",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Invexa <dev@invexa.io>",
+    "license": "UNLICENSED"
+}
