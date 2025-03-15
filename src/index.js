@@ -1,3 +1,4 @@
+import eslintGeneral from "./eslint/general.js";
 import prettierGeneral from "./prettier/general.cjs";
 import prettierTailwind from "./prettier/tailwind.cjs";
 
@@ -6,4 +7,8 @@ const prettier = {
     tailwind: prettierTailwind,
 };
 
-export { prettier };
+const eslint = {
+    general: eslintGeneral,
+};
+
+export { prettier, eslint };

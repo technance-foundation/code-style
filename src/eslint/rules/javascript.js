@@ -1,3 +1,5 @@
+//@ts-check
+
 /** @type {import('eslint').Linter.RulesRecord} */
 export const javascriptRules = {
     /**
@@ -280,12 +282,6 @@ export const javascriptRules = {
      * Allows variable redeclarations in the same scope.
      */
     "no-redeclare": "off",
-
-    /**
-     * Disables the rule preventing variable shadowing.
-     * Permits inner scope variables to reuse names from outer scopes.
-     */
-    "no-shadow": "off",
 
     /**
      * Disables the check for using undeclared variables.

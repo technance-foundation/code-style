@@ -1,3 +1,5 @@
+//@ts-check
+
 /** @type {import('eslint').Linter.RulesRecord} */
 export const reactRules = {
     /**
