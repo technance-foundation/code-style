@@ -1,3 +1,3 @@
-export { javascriptRules } from "./javascript";
-export { reactRules } from "./react";
-export { typescriptRules } from "./typescript";
+export { javascriptRules } from "./javascript.js";
+export { reactRules } from "./react.js";
+export { typescriptRules } from "./typescript.js";
