@@ -14,7 +14,7 @@ import importPlugin from "eslint-plugin-import";
 import { javascriptRules, typescriptRules, nodeRules } from "./rules/index.js";
 
 export default tseslint.config(
-    includeIgnoreFile(path.join(import.meta.dirname, "./.gitignore")),
+    includeIgnoreFile(path.join(process.cwd(), ".gitignore")),
     {
         extends: [
             js.configs.recommended,
