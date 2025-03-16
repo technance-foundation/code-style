@@ -21,7 +21,7 @@ importers:
         specifier: ^8.26.1
         version: 8.26.1(@typescript-eslint/parser@8.25.0(eslint@9.21.0)(typescript@5.7.3))(eslint@9.21.0)(typescript@5.7.3)
       eslint:
-        specifier: ^9.21.0
+        specifier: ^9
         version: 9.21.0
       eslint-plugin-import:
         specifier: ^2.31.0
@@ -45,7 +45,7 @@ importers:
         specifier: ^16.0.0
         version: 16.0.0
       prettier:
-        specifier: ^3.5.2
+        specifier: ^3
         version: 3.5.2
       prettier-plugin-tailwindcss:
         specifier: ^0.6.11
