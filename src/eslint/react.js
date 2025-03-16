@@ -8,7 +8,7 @@ import reactPlugin from "eslint-plugin-react";
 
 import general from "./general.js";
 
-import { reactRules } from "./rules";
+import { reactRules } from "./rules/index.js";
 
 /** @type {import('eslint').Linter.Config[] | import("typescript-eslint").ConfigArray} */
 export default [
