@@ -4,6 +4,7 @@
 import * as path from "node:path";
 import { includeIgnoreFile } from "@eslint/compat";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
+import eslintPluginSortExportAll from "eslint-plugin-sort-export-all";
 import prettierPlugin from "eslint-plugin-prettier";
 import nodePlugin from "eslint-plugin-n";
 import js from "@eslint/js";
@@ -39,6 +40,7 @@ export default tseslint.config(
     },
     {
         plugins: {
+            "sort-export-all": eslintPluginSortExportAll,
             "@typescript-eslint": typescriptEslintPlugin,
             prettier: prettierPlugin,
             import: importPlugin,
