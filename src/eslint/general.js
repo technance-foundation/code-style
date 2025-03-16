@@ -1,3 +1,4 @@
+/// <reference types="./types.d.ts" />
 //@ts-check
 
 import * as path from "node:path";
@@ -8,8 +9,6 @@ import nodePlugin from "eslint-plugin-n";
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-
-// @ts-expect-error -- Package provide no types, and `@types/eslint-plugin-import` is not available.
 import importPlugin from "eslint-plugin-import";
 
 import { javascriptRules, typescriptRules, nodeRules } from "./rules";

@@ -1,3 +1,4 @@
+/// <reference types="./types.d.ts" />
 //@ts-check
 
 import { fixupPluginRules } from "@eslint/compat";
