@@ -12,12 +12,6 @@ export const typescriptRules = {
     ],
 
     /**
-     * Warn when using certain banned types that are discouraged in TypeScript.
-     * (e.g., using types like {} or Object in ways that may lead to confusion.)
-     */
-    "@typescript-eslint/ban-types": "warn",
-
-    /**
      * Enforce consistent type exports.
      * Automatically fixes mixed exports by using inline type specifiers.
      */
