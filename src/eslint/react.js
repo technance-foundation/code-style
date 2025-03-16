@@ -19,6 +19,7 @@ export default [
             "react-hooks": fixupPluginRules(reactHooksPlugin),
             "jsx-a11y": jsxA11yPlugin,
         },
+        settings: { react: { version: "detect" } },
     },
     {
         rules: {
