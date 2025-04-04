@@ -227,4 +227,54 @@ export const reactRules = {
      * Ensures that components fully comply with accessibility guidelines.
      */
     "jsx-a11y/role-has-required-aria-props": "warn",
+
+    /**
+     * Warns when identifiers don't follow naming conventions.
+     * Exempts object literal properties with quotes (e.g., Tailwind CSS classes in cn()/clsx()).
+     */
+    "@typescript-eslint/naming-convention": [
+        "warn",
+        {
+            selector: "default",
+            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
+            leadingUnderscore: "allow",
+            trailingUnderscore: "forbid",
+        },
+        {
+            selector: "property",
+            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
+            leadingUnderscore: "allow",
+            trailingUnderscore: "forbid",
+        },
+        {
+            selector: "objectLiteralProperty",
+            modifiers: ["requiresQuotes"],
+            format: null,
+        },
+    ],
+
+    /**
+     * Errors for misused promises in non-async contexts.
+     * Disables void return checks for attributes to reduce false positives.
+     */
+    "@typescript-eslint/no-misused-promises": [
+        "error",
+        {
+            checksVoidReturn: {
+                attributes: false,
+            },
+        },
+    ],
+
+    /**
+     * Disables warnings for conditions that might be unnecessary.
+     * Prevents overzealous alerts in code with clearly intentional conditional checks.
+     */
+    "@typescript-eslint/no-unnecessary-condition": "off",
+
+    /**
+     * Disables enforcement of using the nullish coalescing operator.
+     * Allows use of logical OR (||) for default values as per developer preference.
+     */
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
 };
