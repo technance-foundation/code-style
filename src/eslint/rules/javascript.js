@@ -462,4 +462,10 @@ export const javascriptRules = {
      * Promotes consistency by requiring functions to be defined via declarations.
      */
     "func-style": ["error", "declaration"],
+
+    /**
+     * Disallows duplicate imports in a single file.
+     * Encourages combining imports from the same module into a single statement.
+     */
+    "import/no-duplicates": ["error", { "prefer-inline": true }],
 };
