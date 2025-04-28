@@ -3,6 +3,7 @@
 
 import globals from "globals";
 import general from "./general.js";
+import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 
 import { nodeRules } from "./rules/index.js";
 
@@ -10,19 +11,23 @@ import { nodeRules } from "./rules/index.js";
 export default [
     ...general,
     {
+        files: ["**/*.{ts,tsx,js,jsx,mjs}"],
         languageOptions: {
             globals: {
                 ...globals.node,
             },
-            ecmaVersion: 5,
             sourceType: "module",
             parserOptions: {
                 projectService: true,
                 tsconfigRootDir: import.meta.dirname,
             },
         },
-    },
-    {
+        linterOptions: {
+            reportUnusedDisableDirectives: true,
+        },
+        plugins: {
+            "@typescript-eslint": typescriptEslintPlugin,
+        },
         rules: {
             ...nodeRules,
         },
