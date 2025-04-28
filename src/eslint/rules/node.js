@@ -9,6 +9,20 @@ export const nodeRules = {
     "no-multiple-empty-lines": ["error", { max: 1 }],
 
     /**
+     * Enforce maximum line length for code and comments.
+     * Limits code to 130 chars and comments to 140 for readability.
+     */
+    "max-len": [
+        "error",
+        {
+            code: 130,
+            comments: 140,
+            ignoreUrls: true,
+            ignoreTemplateLiterals: true,
+        },
+    ],
+
+    /**
      * Disables the rule that prevents the use of the "any" type.
      * Allows developers to use "any" when strict typing is too limiting.
      */
@@ -31,18 +45,4 @@ export const nodeRules = {
      * Provides flexibility when assigning values that might not strictly match the expected types.
      */
     "@typescript-eslint/no-unsafe-assignment": "off",
-
-    /**
-     * Enforce maximum line length for code and comments.
-     * Limits code to 130 chars and comments to 140 for readability.
-     */
-    "max-len": [
-        "error",
-        {
-            code: 130,
-            comments: 140,
-            ignoreUrls: true,
-            ignoreTemplateLiterals: true,
-        },
-    ],
 };
