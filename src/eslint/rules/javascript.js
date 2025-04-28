@@ -612,4 +612,10 @@ export const javascriptRules = {
      * Ensures error arguments are clearly named `err` or `error`.
      */
     "handle-callback-err": ["error", "^(err|error)$"],
+
+    /**
+     * Enforce usage of the `node:` prefix for builtin imports.
+     * Ensures clarity between Node.js core modules and third-party packages.
+     */
+    "node/prefer-node-protocol": "error",
 };
