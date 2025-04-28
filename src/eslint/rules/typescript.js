@@ -82,10 +82,11 @@ export const typescriptRules = {
     "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
 
     /**
-     * Disable enforcing explicit accessibility modifiers (public/private/protected) on class members.
-     * This provides flexibility in defining class properties and methods.
+     * Require explicit accessibility modifiers on class members, except public.
+     * Enforces that private and protected members must be annotated,
+     * while allowing public members to omit the `public` keyword.
      */
-    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/explicit-member-accessibility": ["error", { accessibility: "no-public" }],
 
     /**
      * Disable requiring explicit return types for functions and methods at module boundaries.
