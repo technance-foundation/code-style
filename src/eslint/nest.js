@@ -4,7 +4,7 @@
 import globals from "globals";
 import general from "./general.js";
 
-import { nestRules } from "./rules/index.js";
+import { nodeRules } from "./rules/index.js";
 
 /** @type {import('eslint').Linter.Config[] | import("typescript-eslint").ConfigArray} */
 export default [
@@ -25,7 +25,7 @@ export default [
     },
     {
         rules: {
-            ...nestRules,
+            ...nodeRules,
         },
     },
     {
