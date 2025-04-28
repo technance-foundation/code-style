@@ -11,6 +11,8 @@ import globals from "globals";
 import tseslint from "typescript-eslint";
 import importPlugin from "eslint-plugin-import";
 import prettierPlugin from "eslint-plugin-prettier/recommended";
+import jsoncPlugin from "eslint-plugin-jsonc";
+import jsoncParser from "jsonc-eslint-parser";
 
 import { javascriptRules, typescriptRules, nodeRules } from "./rules/index.js";
 
@@ -69,6 +71,73 @@ export default tseslint.config(
             ...typescriptRules,
             ...javascriptRules,
             ...nodeRules,
+        },
+    },
+    {
+        files: ["package.json"],
+        languageOptions: {
+            parser: jsoncParser,
+        },
+        plugins: {
+            jsonc: jsoncPlugin,
+        },
+        rules: {
+            "@typescript-eslint/naming-convention": "off",
+            "jsonc/sort-keys": [
+                "error",
+                {
+                    pathPattern: "^$",
+                    order: [
+                        "publisher",
+                        "name",
+                        "displayName",
+                        "description",
+                        "version",
+                        "private",
+                        "engines",
+                        "main",
+                        "type",
+                        "files",
+                        "bin",
+                        "exports",
+                        "imports",
+                        "scripts",
+                        "devDependencies",
+                        "dependencies",
+                        "optionalDependencies",
+                        "peerDependencies",
+                        "peerDependenciesMeta",
+                        "packageManager",
+                        "author",
+                        "license",
+                        "funding",
+                        "homepage",
+                        "repository",
+                        "bugs",
+                        "keywords",
+                        "categories",
+                        "sideEffects",
+                        "types",
+                        "typesVersions",
+                        "icon",
+                        "activationEvents",
+                        "contributes",
+                        "pnpm",
+                        "overrides",
+                        "resolutions",
+                        "husky",
+                        "simple-git-hooks",
+                        "lint-staged",
+                        "eslintConfig",
+                        "eslintIgnore",
+                        "prettier",
+                        "commitlint",
+                        "publishConfig",
+                        "np",
+                        "c8",
+                    ],
+                },
+            ],
         },
     },
 );
