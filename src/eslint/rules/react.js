@@ -267,4 +267,10 @@ export const reactRules = {
      * Allows use of logical OR (||) for default values as per developer preference.
      */
     "@typescript-eslint/prefer-nullish-coalescing": "off",
+
+    /**
+     * Enforces consistent file extension usage in imports.
+     * Disallows extensions except for json, scss, and svg files which must include them.
+     */
+    "import/extensions": ["error", "never", { json: "always", scss: "always", svg: "always" }],
 };

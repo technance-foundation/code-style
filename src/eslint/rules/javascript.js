@@ -368,12 +368,6 @@ export const javascriptRules = {
     "import/no-unresolved": "off",
 
     /**
-     * Enforces consistent file extension usage in imports.
-     * Disallows extensions except for json, scss, and svg files which must include them.
-     */
-    "import/extensions": ["error", "never", { json: "always", scss: "always", svg: "always" }],
-
-    /**
      * Enforces a consistent order for import statements by grouping them into:
      * - "builtin" and "external": Node.js and third-party modules (e.g., fs, React).
      * - "internal": Project-specific modules, including aliased paths matching "#*".
@@ -618,4 +612,13 @@ export const javascriptRules = {
      * Ensures clarity between Node.js core modules and third-party packages.
      */
     "node/prefer-node-protocol": "error",
+
+    /**
+     * Disables the rule enforcing file extension specification in import statements.
+     * The ESM modules require `.js` extension and it's common for frameworks like Nest.js or Angular to follow
+     * a naming pattern for modules such as .entity, .config, .storage, and .decorator.
+     * Enforcing extensions leads to frequent false errors due to these naming conventions.
+     * Disabling the rule enhances development flexibility and minimizes unnecessary import errors.
+     */
+    "import/extensions": "off",
 };
