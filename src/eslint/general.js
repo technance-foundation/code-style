@@ -61,6 +61,7 @@ export default tseslint.config(
         },
     },
     {
+        ignores: ["package.json"],
         plugins: {
             "sort-export-all": eslintPluginSortExportAll,
             "@typescript-eslint": typescriptEslintPlugin,
