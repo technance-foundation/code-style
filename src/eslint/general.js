@@ -16,6 +16,25 @@ import { javascriptRules, typescriptRules, nodeRules } from "./rules/index.js";
 
 export default tseslint.config(
     includeIgnoreFile(path.join(process.cwd(), ".gitignore")),
+    {
+        ignores: [
+            "*.min.*",
+            "*.d.ts",
+            "CHANGELOG.md",
+            "dist/**",
+            ".next/**",
+            "LICENSE*",
+            "output/**",
+            "coverage/**",
+            "temp/**",
+            "build/**",
+            "public/assets/**",
+            "pnpm-lock.yaml",
+            "yarn.lock",
+            "package-lock.json",
+            "__snapshots__/**",
+        ],
+    },
     prettierPlugin,
     {
         extends: [
