@@ -123,12 +123,6 @@ export const javascriptRules = {
     "no-global-assign": "error",
 
     /**
-     * Disallows invalid regular expressions in RegExp constructors.
-     * Prevents runtime errors caused by malformed regex patterns.
-     */
-    "no-invalid-regexp": "error",
-
-    /**
      * Forbids irregular whitespace outside of strings and comments.
      * Ensures consistent formatting and prevents hidden errors.
      */
@@ -468,4 +462,154 @@ export const javascriptRules = {
      * Encourages combining imports from the same module into a single statement.
      */
     "import/no-duplicates": ["error", { "prefer-inline": true }],
+
+    /**
+     * Disallow unreachable code after `return`, `throw`, `continue`, or `break`.
+     * Eliminates dead code and potential logic errors.
+     */
+    "no-unreachable": ["error"],
+
+    /**
+     * Disallow multiple consecutive spaces (except for alignment).
+     * Keeps spacing consistent and avoids accidental extra whitespace.
+     */
+    "no-multi-spaces": ["error"],
+
+    /**
+     * Disallow initializing variables to `undefined`.
+     * Encourages cleaner declarations without redundant assignments.
+     */
+    "no-undef-init": ["error"],
+
+    /**
+     * Disallow padding (empty lines) inside code blocks.
+     * Prevents unnecessary vertical whitespace and maintains focus.
+     */
+    "padded-blocks": ["error", "never"],
+
+    /**
+     * Disallow spaces inside parentheses.
+     * Ensures tight grouping and avoids inconsistent spacing.
+     */
+    "space-in-parens": ["error", "never"],
+
+    /**
+     * Enforce one true brace style (1tbs) for block statements.
+     * Maintains consistent brace placement across the codebase.
+     */
+    "brace-style": ["error", "1tbs"],
+
+    /**
+     * Require braces for all control statements.
+     * Prevents errors from relying on implicit single-statement blocks.
+     */
+    curly: ["error", "all"],
+
+    /**
+     * Disallow combining multiple variable declarations into one `var` statement.
+     * Promotes separate declarations to improve readability and reduce mistakes.
+     */
+    "one-var": ["error", "never"],
+
+    /**
+     * Require trailing commas in multiline constructs.
+     * Reduces diff noise and simplifies adding or removing elements.
+     */
+    "comma-dangle": ["error", "always-multiline"],
+
+    /**
+     * Enforce strict equality operators (`===` and `!==`).
+     * Prevents unexpected type coercion in equality comparisons.
+     */
+    eqeqeq: ["error", "always"],
+
+    /**
+     * Enforce a newline at the end of files.
+     * Ensures POSIX compatibility and avoids issues with file concatenation.
+     */
+    "eol-last": ["error", "always"],
+
+    /**
+     * Require parentheses when invoking a constructor with no arguments.
+     * Clarifies intent and prevents potential ambiguity.
+     */
+    "new-parens": ["error", "always"],
+
+    /**
+     * Disallow usage of `arguments.caller` and `arguments.callee`.
+     * These features are deprecated and hinder JavaScript engine optimizations.
+     */
+    "no-caller": ["error"],
+
+    /**
+     * Disallow use of `eval()`.
+     * Prevents arbitrary code execution and security vulnerabilities.
+     */
+    "no-eval": ["error"],
+
+    /**
+     * Disallow function or variable declarations in nested blocks.
+     * Avoids confusing hoisting behavior and maintains predictable scope.
+     */
+    "no-inner-declarations": ["error"],
+
+    /**
+     * Disallow invalid regular expressions in `RegExp` constructors.
+     * Catches typos and incorrect flags to avoid runtime errors.
+     */
+    "no-invalid-regexp": ["error", { allowConstructorFlags: ["u", "y"] }],
+
+    /**
+     * Disallow use of the `__proto__` property.
+     * Encourages standard methods like `Object.getPrototypeOf()` for reliability.
+     */
+    "no-proto": ["error"],
+
+    /**
+     * Disallow self-comparisons where both sides are identical.
+     * Highlights likely logic errors and redundant code.
+     */
+    "no-self-compare": ["error"],
+
+    /**
+     * Disallow mixed spaces and tabs for indentation.
+     * Ensures consistent formatting and prevents alignment issues.
+     */
+    "no-mixed-spaces-and-tabs": ["error"],
+
+    /**
+     * Disallow negating the left operand in relational expressions.
+     * Prevents unexpected behavior in patterns like `!key in object`.
+     */
+    "no-unsafe-negation": ["error"],
+
+    /**
+     * Disallow creation of wrapper objects for primitive types.
+     * Prevents unintended behavior and reduces unnecessary object instantiation.
+     */
+    "no-new-wrappers": ["error"],
+
+    /**
+     * Disallow `this` or `super` before calling `super()` in constructors.
+     * Ensures derived classes are properly initialized before use.
+     */
+    "no-this-before-super": ["error"],
+
+    /**
+     * Enforce no spaces between rest/spread operators and their expressions.
+     * Maintains consistent spacing in destructuring and spread usage.
+     */
+    "rest-spread-spacing": ["error", "never"],
+
+    /**
+     * Disallow trailing whitespace at the end of lines.
+     * Keeps diffs clean and avoids unnecessary whitespace characters.
+     */
+    "no-trailing-spaces": ["error", { ignoreComments: true }],
+
+    /**
+     * Enforce error-first callback parameter naming.
+     * Ensures error arguments are clearly named `err` or `error`.
+     */
+    "handle-callback-err": ["error", "^(err|error)$"],
 };
