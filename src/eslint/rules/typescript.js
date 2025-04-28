@@ -1,5 +1,7 @@
 //@ts-check
 
+import { namingConvention } from "./sub-rules/naming-convention.js";
+
 /** @type {import('eslint').Linter.RulesRecord} */
 export const typescriptRules = {
     /**
@@ -42,26 +44,10 @@ export const typescriptRules = {
     "@typescript-eslint/no-unsafe-argument": "warn",
 
     /**
-     * Enforce naming conventions for identifiers:
-     * - Default identifiers must be in strictCamelCase, StrictPascalCase, or UPPER_CASE.
-     * - Property names must follow the same casing rules.
-     * Leading underscores are allowed while trailing underscores are forbidden.
+     * Variables must be camelCase, UPPER_CASE, or PascalCase
+     * Errors when identifiers don't follow naming conventions.
      */
-    "@typescript-eslint/naming-convention": [
-        "warn",
-        {
-            selector: "default",
-            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
-            leadingUnderscore: "allow",
-            trailingUnderscore: "forbid",
-        },
-        {
-            selector: "property",
-            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
-            leadingUnderscore: "allow",
-            trailingUnderscore: "forbid",
-        },
-    ],
+    "@typescript-eslint/naming-convention": ["error", ...namingConvention],
 
     /**
      * Warn when deprecated APIs or features are used.
@@ -82,10 +68,11 @@ export const typescriptRules = {
     "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
 
     /**
-     * Disable enforcing explicit accessibility modifiers (public/private/protected) on class members.
-     * This provides flexibility in defining class properties and methods.
+     * Require explicit accessibility modifiers on class members, except public.
+     * Enforces that private and protected members must be annotated,
+     * while allowing public members to omit the `public` keyword.
      */
-    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/explicit-member-accessibility": ["error", { accessibility: "no-public" }],
 
     /**
      * Disable requiring explicit return types for functions and methods at module boundaries.

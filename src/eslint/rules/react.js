@@ -1,4 +1,5 @@
 //@ts-check
+import { namingConvention } from "./sub-rules/naming-convention.js";
 
 /** @type {import('eslint').Linter.RulesRecord} */
 export const reactRules = {
@@ -229,23 +230,12 @@ export const reactRules = {
     "jsx-a11y/role-has-required-aria-props": "warn",
 
     /**
-     * Warns when identifiers don't follow naming conventions.
+     * Errors when identifiers don't follow naming conventions.
      * Exempts object literal properties with quotes (e.g., Tailwind CSS classes in cn()/clsx()).
      */
     "@typescript-eslint/naming-convention": [
-        "warn",
-        {
-            selector: "default",
-            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
-            leadingUnderscore: "allow",
-            trailingUnderscore: "forbid",
-        },
-        {
-            selector: "property",
-            format: ["strictCamelCase", "StrictPascalCase", "UPPER_CASE"],
-            leadingUnderscore: "allow",
-            trailingUnderscore: "forbid",
-        },
+        "error",
+        ...namingConvention,
         {
             selector: "objectLiteralProperty",
             modifiers: ["requiresQuotes"],
@@ -277,4 +267,10 @@ export const reactRules = {
      * Allows use of logical OR (||) for default values as per developer preference.
      */
     "@typescript-eslint/prefer-nullish-coalescing": "off",
+
+    /**
+     * Enforces consistent file extension usage in imports.
+     * Disallows extensions except for json, scss, and svg files which must include them.
+     */
+    "import/extensions": ["error", "never", { json: "always", scss: "always", svg: "always" }],
 };
