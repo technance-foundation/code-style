@@ -71,7 +71,6 @@ export default tseslint.config(
         rules: {
             ...typescriptRules,
             ...javascriptRules,
-            ...nodeRules,
         },
     },
     {
