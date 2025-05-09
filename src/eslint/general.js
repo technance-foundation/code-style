@@ -14,7 +14,7 @@ import prettierPlugin from "eslint-plugin-prettier/recommended";
 import jsoncPlugin from "eslint-plugin-jsonc";
 import jsoncParser from "jsonc-eslint-parser";
 
-import { javascriptRules, typescriptRules, nodeRules } from "./rules/index.js";
+import { javascriptRules, typescriptRules } from "./rules/index.js";
 
 export default tseslint.config(
     includeIgnoreFile(path.join(process.cwd(), ".gitignore")),
