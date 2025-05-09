@@ -17,7 +17,6 @@ import { reactRules } from "./rules/index.js";
 export default [
     ...general,
     {
-        ignores: ["package.json"],
         plugins: {
             "@typescript-eslint": typescriptEslintPlugin,
             import: importPlugin,
