@@ -151,4 +151,10 @@ export const typescriptRules = {
      * Indicates that the async modifier may be unnecessary and the function could be simplified.
      */
     "@typescript-eslint/require-await": "warn",
+
+    /**
+     * Disables the rule that encourages using nullish coalescing operator (??) over logical OR (||).
+     * This allows developers to choose their preferred operator based on their specific use case.
+     */
+    "@typescript-eslint/prefer-nullish-coalescing": "off",
 };

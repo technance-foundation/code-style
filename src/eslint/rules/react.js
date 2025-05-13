@@ -263,12 +263,6 @@ export const reactRules = {
     "@typescript-eslint/no-unnecessary-condition": "off",
 
     /**
-     * Disables enforcement of using the nullish coalescing operator.
-     * Allows use of logical OR (||) for default values as per developer preference.
-     */
-    "@typescript-eslint/prefer-nullish-coalescing": "off",
-
-    /**
      * Enforces consistent file extension usage in imports.
      * Disallows extensions except for json, scss, and svg files which must include them.
      */
