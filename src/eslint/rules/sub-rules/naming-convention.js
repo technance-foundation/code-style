@@ -32,4 +32,12 @@ export const namingConvention = [
         format: ["PascalCase"],
         custom: { regex: "^I[A-Z]", match: false },
     },
+    {
+        selector: "method",
+        filter: {
+            regex: "^(toJSON|fromJSON)$",
+            match: true,
+        },
+        format: null,
+    },
 ];
