@@ -267,4 +267,12 @@ export const reactRules = {
      * Disallows extensions except for json, scss, and svg files which must include them.
      */
     "import/extensions": ["error", "never", { json: "always", scss: "always", svg: "always" }],
+
+    /**
+     * Warns when React useEffect hooks are likely unnecessary.
+     * Identifies effects that only use internal state/props, derive state updates,
+     * initialize state, reset state on prop changes, or couple parent-child behavior.
+     * Helps make code simpler, faster, and safer by encouraging more idiomatic React patterns.
+     */
+    "react-you-might-not-need-an-effect/you-might-not-need-an-effect": "warn",
 };

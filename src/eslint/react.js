@@ -8,6 +8,7 @@ import reactPlugin from "eslint-plugin-react";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import importPlugin from "eslint-plugin-import";
 import eslintPluginSortExportAll from "eslint-plugin-sort-export-all";
+import youMightNotNeedAnEffect from "eslint-plugin-react-you-might-not-need-an-effect";
 
 import general from "./general.js";
 
@@ -24,6 +25,7 @@ export default [
             react: reactPlugin,
             "react-hooks": fixupPluginRules(reactHooksPlugin),
             "jsx-a11y": jsxA11yPlugin,
+            "react-you-might-not-need-an-effect": youMightNotNeedAnEffect,
         },
         settings: { react: { version: "detect" } },
     },

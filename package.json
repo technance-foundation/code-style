@@ -62,6 +62,7 @@
         "eslint-plugin-prettier": "^5.2.3",
         "eslint-plugin-react": "^7.37.4",
         "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-react-you-might-not-need-an-effect": "^0.0.42",
         "eslint-plugin-sort-export-all": "^2.1.0",
         "globals": "^16.0.0",
         "jsonc-eslint-parser": "^2.4.0",
