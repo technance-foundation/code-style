@@ -107,7 +107,21 @@ export default [
 
 ### Frontend App Using Tailwind CSS
 
-If your frontend project uses Tailwind CSS, use the Tailwind-specific Prettier configuration. Create a file named `prettier.config.cjs` with the following content:
+If your frontend project uses Tailwind CSS, use the Tailwind-specific Prettier configuration. First, install the required peer dependency:
+
+```bash
+pnpm add prettier-plugin-tailwindcss -D
+```
+
+```bash
+npm install --save-dev prettier-plugin-tailwindcss
+```
+
+```bash
+yarn add -D prettier-plugin-tailwindcss
+```
+
+Then create a file named `prettier.config.cjs` with the following content:
 
 ```js
 // prettier.config.cjs
