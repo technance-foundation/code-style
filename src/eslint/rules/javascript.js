@@ -326,10 +326,10 @@ export const javascriptRules = {
     "prefer-destructuring": "warn",
 
     /**
-     * Disallows the use of certain ambiguous or shortened identifier names.
-     * Prevents use of names like arr, cb, e, etc., to improve code clarity.
+     * Disables the rule limiting the use of certain shortened identifier names.
+     * Allow use of names like arr, cb, e, etc., avoiding over-verbosity in closures.
      */
-    "id-blacklist": ["error", "arr", "cb", "e", "el", "err", "idx", "num", "req", "res", "str", "tmp", "val"],
+    "id-blacklist": "off",
 
     /**
      * Disables the rule limiting the number of classes per file.
