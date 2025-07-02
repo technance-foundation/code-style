@@ -157,4 +157,12 @@ export const typescriptRules = {
      * This allows developers to choose their preferred operator based on their specific use case.
      */
     "@typescript-eslint/prefer-nullish-coalescing": "off",
+
+    /**
+     * Allows empty interfaces, which are often used for module augmentation or as extension points.
+     * Still disallows empty type aliases, which are usually redundant.
+     * Strikes a balance between flexibility for library authors and avoiding meaningless types.
+     * Prevents false positives on valid, intentional interface declarations.
+     */
+    "@typescript-eslint/no-empty-object-type": ["error", { allowInterfaces: "always" }],
 };
