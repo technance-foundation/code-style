@@ -65,7 +65,18 @@ export const typescriptRules = {
      * Error on unused variables to help maintain clean, maintainable code.
      * Ignores function arguments starting with an underscore and unused rest properties.
      */
-    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", ignoreRestSiblings: true }],
+    "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+            args: "all",
+            argsIgnorePattern: "^_",
+            caughtErrors: "all",
+            caughtErrorsIgnorePattern: "^_",
+            destructuredArrayIgnorePattern: "^_",
+            varsIgnorePattern: "^_",
+            ignoreRestSiblings: true,
+        },
+    ],
 
     /**
      * Require explicit accessibility modifiers on class members, except public.
