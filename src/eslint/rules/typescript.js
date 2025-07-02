@@ -164,5 +164,5 @@ export const typescriptRules = {
      * Strikes a balance between flexibility for library authors and avoiding meaningless types.
      * Prevents false positives on valid, intentional interface declarations.
      */
-    "@typescript-eslint/no-empty-object-type": ["error", { allowInterfaces: true }],
+    "@typescript-eslint/no-empty-object-type": ["error", { allowInterfaces: "always" }],
 };
