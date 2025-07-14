@@ -8,7 +8,6 @@ import reactPlugin from "eslint-plugin-react";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import importPlugin from "eslint-plugin-import";
 import eslintPluginSortExportAll from "eslint-plugin-sort-export-all";
-import youMightNotNeedAnEffect from "eslint-plugin-react-you-might-not-need-an-effect";
 
 import general from "./general.js";
 
@@ -17,7 +16,6 @@ import { reactRules } from "./rules/index.js";
 /** @type {import('eslint').Linter.Config[] | import("typescript-eslint").ConfigArray} */
 export default [
     ...general,
-    youMightNotNeedAnEffect.configs.recommended,
     {
         plugins: {
             "@typescript-eslint": typescriptEslintPlugin,
