@@ -17,6 +17,7 @@ import { reactRules } from "./rules/index.js";
 /** @type {import('eslint').Linter.Config[] | import("typescript-eslint").ConfigArray} */
 export default [
     ...general,
+    youMightNotNeedAnEffect.configs.recommended,
     {
         plugins: {
             "@typescript-eslint": typescriptEslintPlugin,
@@ -25,7 +26,6 @@ export default [
             react: reactPlugin,
             "react-hooks": fixupPluginRules(reactHooksPlugin),
             "jsx-a11y": jsxA11yPlugin,
-            "react-you-might-not-need-an-effect": youMightNotNeedAnEffect,
         },
         settings: { react: { version: "detect" } },
     },
