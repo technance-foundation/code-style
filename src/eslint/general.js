@@ -13,11 +13,14 @@ import importPlugin from "eslint-plugin-import";
 import prettierPlugin from "eslint-plugin-prettier/recommended";
 import jsoncPlugin from "eslint-plugin-jsonc";
 import jsoncParser from "jsonc-eslint-parser";
+import fs from "node:fs";
 
 import { javascriptRules, typescriptRules } from "./rules/index.js";
 
+const gitignorePath = path.resolve(process.cwd(), ".gitignore");
+
 export default tseslint.config(
-    includeIgnoreFile(path.join(process.cwd(), ".gitignore")),
+    fs.existsSync(gitignorePath) ? includeIgnoreFile(gitignorePath) : {},
     {
         ignores: [
             "*.min.*",
