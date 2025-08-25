@@ -1,5 +1,3 @@
-/// <reference types="./types.d.ts" />
-//@ts-check
 import expoConfig from "eslint-config-expo/flat";
 
 import react from "./react.js";
