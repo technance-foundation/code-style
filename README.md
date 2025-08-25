@@ -103,7 +103,7 @@ export default [
 
 ### Expo (Mobile Applications)
 
-For react-native(Expo) projects, use the `eslint.expo` preset. For example:
+For Expo (React Native) projects, use the `eslint.expo` preset. For example:
 
 ```js
 // eslint.config.mjs
