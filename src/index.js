@@ -3,6 +3,7 @@ import eslintReact from "./eslint/react.js";
 import eslintNext from "./eslint/next.js";
 import eslintNest from "./eslint/nest.js";
 import eslintNode from "./eslint/node.js";
+import eslintExpo from "./eslint/expo.js";
 import prettierGeneral from "./prettier/general.cjs";
 import prettierTailwind from "./prettier/tailwind.cjs";
 
@@ -17,6 +18,7 @@ const eslint = {
     next: eslintNext,
     nest: eslintNest,
     node: eslintNode,
+    expo: eslintExpo,
 };
 
 export { prettier, eslint };
