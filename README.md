@@ -101,6 +101,25 @@ export default [
 ];
 ```
 
+### Expo (Mobile Applications)
+
+For Expo (React Native) projects, use the `eslint.expo` preset. For example:
+
+```js
+// eslint.config.mjs
+import { eslint } from "@technance/code-style";
+
+/** @type {import("eslint").Linter.Config[]} */
+export default [
+    ...eslint.expo,
+    {
+        rules: {
+            // Extend or override...
+        },
+    },
+];
+```
+
 ## Prettier Configurations
 
 `@technance/code-style` also offers Prettier configurations to keep your code formatting consistent. There are two presets available: one for general projects and one for Tailwind CSS projects.
