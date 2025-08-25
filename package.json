@@ -84,5 +84,10 @@
         "prettier-plugin-tailwindcss": {
             "optional": true
         }
+    },
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "unrs-resolver"
+        ]
     }
 }
