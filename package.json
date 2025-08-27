@@ -45,9 +45,10 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 0",
         "release:preview": "np prerelease --any-branch --no-release-draft --tag=preview",
-        "changeset": "changeset",
         "build": "tsc",
-        "check": "pnpm build && pnpm type-check",
+        "type-check": "tsc --noEmit",
+        "check": "pnpm run type-check",
+        "changeset": "changeset",
         "bump": "changeset version",
         "release": "changeset publish",
         "prepublishOnly": "pnpm build"
