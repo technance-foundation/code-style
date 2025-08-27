@@ -3,6 +3,7 @@
     "type": "module",
     "version": "1.4.0",
     "description": "📏 Technance code-style: Unified ESLint & Prettier configs for React, Next.js & Nest.js projects",
+    "packageManager": "pnpm@10.6.5",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/technance-foundation/code-style.git"
