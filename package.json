@@ -46,6 +46,7 @@
         "test": "echo \"Error: no test specified\" && exit 0",
         "release:preview": "np prerelease --any-branch --no-release-draft --tag=preview",
         "changeset": "changeset",
+        "build": "pnpm -r build",
         "bump": "changeset version",
         "release": "changeset publish",
         "prepublishOnly": "pnpm build"
