@@ -9,6 +9,7 @@ on:
         tags:
             - "!**"
         paths:
+            - "**"
             - ".github/workflows/preview-release.yml"
 
 env:
@@ -46,4 +47,4 @@ jobs:
               run: pnpm build
 
             - name: Publish packages
-              run: pnpm dlx pkg-pr-new publish --pnpm
+              run: pnpm dlx pkg-pr-new publish --pnpm '.'
