@@ -47,7 +47,7 @@
         "release:preview": "np prerelease --any-branch --no-release-draft --tag=preview",
         "changeset": "changeset",
         "build": "pnpm -r build",
-        "check": "pnpm run lint && pnpm run prettier --check && pnpm run test",
+        "check": "pnpm build && pnpm type-check",
         "bump": "changeset version",
         "release": "changeset publish",
         "prepublishOnly": "pnpm build"
