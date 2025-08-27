@@ -43,8 +43,11 @@
     ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 0",
-        "release": "np --no-release-draft",
-        "release:preview": "np prerelease --any-branch --no-release-draft --tag=preview"
+        "release:preview": "np prerelease --any-branch --no-release-draft --tag=preview",
+        "changeset": "changeset",
+        "bump": "changeset version",
+        "release": "changeset publish",
+        "prepublishOnly": "pnpm build"
     },
     "keywords": [],
     "author": "Technance <dev@technance.io>",
