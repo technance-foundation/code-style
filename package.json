@@ -1,7 +1,7 @@
 {
     "name": "@technance/code-style",
     "type": "module",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "description": "📏 Technance code-style: Unified ESLint & Prettier configs for React, Next.js & Nest.js projects",
     "packageManager": "pnpm@10.6.5",
     "repository": {
