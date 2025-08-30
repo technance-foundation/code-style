@@ -54,7 +54,7 @@
         "prepublishOnly": "pnpm build"
     },
     "keywords": [],
-    "author": "Technance <dev@technance.io>",
+    "author": "Technance <dev@technance.com>",
     "license": "UNLICENSED",
     "dependencies": {
         "@eslint/compat": "^1.3.1",
