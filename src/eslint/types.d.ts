@@ -23,7 +23,8 @@ declare module "@next/eslint-plugin-next" {
 }
 
 declare module "eslint-config-expo/flat.js" {
-    import type { Linter, Rule } from "eslint";
+    import type { Linter } from "eslint";
 
-    export default expoConfig = [] as Linter.Config[];
+    const expoConfig: Linter.Config[];
+    export default expoConfig;
 }
