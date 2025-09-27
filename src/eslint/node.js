@@ -3,7 +3,6 @@
 
 import globals from "globals";
 import general from "./general.js";
-import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 
 import { nodeRules } from "./rules/index.js";
 
@@ -24,9 +23,6 @@ export default [
         },
         linterOptions: {
             reportUnusedDisableDirectives: true,
-        },
-        plugins: {
-            "@typescript-eslint": typescriptEslintPlugin,
         },
         rules: {
             ...nodeRules,

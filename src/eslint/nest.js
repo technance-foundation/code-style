@@ -3,7 +3,6 @@
 
 import globals from "globals";
 import general from "./general.js";
-import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import importPlugin from "eslint-plugin-import";
 import eslintPluginSortExportAll from "eslint-plugin-sort-export-all";
 
@@ -14,7 +13,6 @@ export default [
     ...general,
     {
         plugins: {
-            "@typescript-eslint": typescriptEslintPlugin,
             import: importPlugin,
             "sort-export-all": eslintPluginSortExportAll,
         },
