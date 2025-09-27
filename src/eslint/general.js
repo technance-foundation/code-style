@@ -3,7 +3,6 @@
 
 import * as path from "node:path";
 import { includeIgnoreFile } from "@eslint/compat";
-import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import eslintPluginSortExportAll from "eslint-plugin-sort-export-all";
 import nodePlugin from "eslint-plugin-n";
 import js from "@eslint/js";
@@ -67,7 +66,6 @@ export default tseslint.config(
         ignores: ["package.json"],
         plugins: {
             "sort-export-all": eslintPluginSortExportAll,
-            "@typescript-eslint": typescriptEslintPlugin,
             import: importPlugin,
             node: nodePlugin,
         },
