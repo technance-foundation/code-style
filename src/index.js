@@ -6,6 +6,7 @@ import eslintNode from "./eslint/node.js";
 import eslintExpo from "./eslint/expo.js";
 import prettierGeneral from "./prettier/general.cjs";
 import prettierTailwind from "./prettier/tailwind.cjs";
+import biomeConfig from "./biome/config.js";
 
 const prettier = {
     general: prettierGeneral,
@@ -21,4 +22,6 @@ const eslint = {
     expo: eslintExpo,
 };
 
-export { prettier, eslint };
+const biome = biomeConfig;
+
+export { prettier, eslint, biome };
