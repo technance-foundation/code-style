@@ -1,7 +1,6 @@
 /// <reference types="./types.d.ts" />
 //@ts-check
 
-import { fixupPluginRules } from "@eslint/compat";
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y";
 import reactHooksPlugin from "eslint-plugin-react-hooks";
 import reactPlugin from "eslint-plugin-react";
@@ -22,7 +21,7 @@ export default [
             import: importPlugin,
             "sort-export-all": eslintPluginSortExportAll,
             react: reactPlugin,
-            "react-hooks": fixupPluginRules(reactHooksPlugin),
+            "react-hooks": reactHooksPlugin,
             "jsx-a11y": jsxA11yPlugin,
         },
         settings: { react: { version: "detect" } },
