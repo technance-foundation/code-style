@@ -35,10 +35,7 @@
             "types": "./src/prettier/tailwind.d.ts",
             "require": "./src/prettier/tailwind.cjs"
         },
-        "./biome": {
-            "import": "./src/biome/config.js",
-            "require": "./src/biome/config.cjs"
-        },
+        "./biome": "./src/biome/biome.jsonc",
         "./types": {
             "types": "./src/types.d.ts"
         }
