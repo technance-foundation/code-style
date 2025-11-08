@@ -1,7 +1,7 @@
 {
     "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-    "root": true,
-
+    "root": false,
+    "extends": "//",
     "linter": {
         "enabled": true,
         "domains": {
