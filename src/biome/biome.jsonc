@@ -1,0 +1,106 @@
+{
+    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "root": false,
+    "extends": "//",
+    "linter": {
+        "enabled": true,
+        "domains": {
+            "project": "recommended",
+            "react": "all",
+        },
+        "rules": {
+            "correctness": {
+                "useUniqueElementIds": "off",
+                "useImportExtensions": "off",
+                "noUndeclaredDependencies": "off",
+            },
+            "style": {
+                "useExportType": "error",
+                "noNonNullAssertion": "off",
+            },
+            "a11y": {
+                "noSvgWithoutTitle": "off",
+            },
+        },
+    },
+
+    "assist": {
+        "enabled": true,
+        "actions": {
+            "source": {
+                "organizeImports": {
+                    "level": "on",
+                    "options": {
+                        "groups": [
+                            // Packages (node builtins + npm deps)
+                            [":NODE:", ":PACKAGE:"],
+                            ":BLANK_LINE:",
+
+                            ["#*", "#/**"],
+                            ":BLANK_LINE:",
+
+                            // Parent imports (../*)
+                            "../**",
+                            ":BLANK_LINE:",
+
+                            // Sibling value imports (./*) — keep types separate so they stay last
+                            { "type": false, "source": ["./**"] },
+
+                            // Sibling type-only imports last
+                            { "type": true, "source": ["./**"] },
+                        ],
+                        "identifierOrder": "natural",
+                    },
+                },
+            },
+        },
+    },
+
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 130,
+        "lineEnding": "lf",
+        "useEditorconfig": false,
+    },
+
+    /**
+     * Language tweaks for JS/TS
+     */
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "double",
+            "jsxQuoteStyle": "double",
+            "lineWidth": 130,
+            "indentWidth": 4,
+        },
+    },
+
+    /**
+     * Make Biome skip test files for linting as it usually gets in the way rather than being helpful
+     */
+    "overrides": [
+        {
+            "includes": [
+                "**/*.spec.ts",
+                "**/*.spec.tsx",
+                "**/*.spec.js",
+                "**/*.test.ts",
+                "**/*.test.tsx",
+                "**/*.test.js",
+                "**/__tests__/**",
+                "**/tests/**",
+            ],
+            "linter": {
+                "enabled": false,
+            },
+        },
+    ],
+
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true,
+    },
+}
