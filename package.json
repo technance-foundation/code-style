@@ -11,6 +11,7 @@
         "@changesets/cli": "^2.29.7",
         "@types/eslint-plugin-jsx-a11y": "^6.10.1",
         "@types/node": "^24.10.0",
+        "eslint": "^9.39.1",
         "np": "^10.2.0",
         "turbo": "^2.6.0",
         "typescript": "^5.9.3",
