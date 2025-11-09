@@ -3,7 +3,6 @@
     "type": "module",
     "version": "1.4.2",
     "description": "📏 Technance code-style: Unified ESLint & Prettier configs for React, Next.js & Nest.js projects",
-    "packageManager": "pnpm@10.6.5",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/technance-foundation/code-style.git"
@@ -77,16 +76,6 @@
         "jsonc-eslint-parser": "^2.4.1",
         "typescript-eslint": "^8.46.3"
     },
-    "devDependencies": {
-        "@biomejs/biome": "^2.3.4",
-        "@changesets/changelog-github": "^0.5.1",
-        "@changesets/cli": "^2.29.7",
-        "@types/eslint-plugin-jsx-a11y": "^6.10.1",
-        "@types/node": "^24.10.0",
-        "np": "^10.2.0",
-        "turbo": "^2.6.0",
-        "typescript": "^5.9.3"
-    },
     "peerDependencies": {
         "eslint": "^9",
         "prettier": "^3",
@@ -96,11 +85,5 @@
         "prettier-plugin-tailwindcss": {
             "optional": true
         }
-    },
-    "pnpm": {
-        "onlyBuiltDependencies": [
-            "esbuild",
-            "unrs-resolver"
-        ]
     }
 }
