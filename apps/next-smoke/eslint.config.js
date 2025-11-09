@@ -1,4 +1,4 @@
-import nextConfig from "../src/eslint/next.js";
+import nextConfig from "../../src/eslint/next.js";
 
 export default [
 	...nextConfig,
