@@ -1,0 +1,13 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"extends": ["../../src/biome/biome.jsonc"],
+	"linter": {
+		"enabled": true
+	},
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "space",
+		"indentWidth": 4,
+		"lineWidth": 130
+	}
+}
