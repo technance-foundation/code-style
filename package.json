@@ -84,6 +84,7 @@
         "@types/eslint-plugin-jsx-a11y": "^6.10.1",
         "@types/node": "^24.10.0",
         "np": "^10.2.0",
+        "turbo": "^2.6.0",
         "typescript": "^5.9.3"
     },
     "peerDependencies": {
