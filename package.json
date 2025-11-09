@@ -13,7 +13,8 @@
         "@types/node": "^24.10.0",
         "np": "^10.2.0",
         "turbo": "^2.6.0",
-        "typescript": "^5.9.3"
+        "typescript": "^5.9.3",
+        "vitest": "^4.0.8"
     },
     "pnpm": {
         "onlyBuiltDependencies": [
