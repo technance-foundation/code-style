@@ -1,0 +1,13 @@
+{
+    "name": "@technance/code-style-smoke-tests",
+    "version": "1.0.0",
+    "type": "module",
+    "private": true,
+    "description": "Smoke tests for Biome, ESLint, and Prettier configurations",
+    "scripts": {
+        "test": "vitest run",
+        "biome": "biome check",
+        "eslint": "eslint",
+        "prettier": "prettier"
+    }
+}

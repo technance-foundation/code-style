@@ -1,0 +1,89 @@
+{
+    "name": "@technance/code-style",
+    "type": "module",
+    "version": "1.4.2",
+    "description": "📏 Technance code-style: Unified ESLint & Prettier configs for React, Next.js & Nest.js projects",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/technance-foundation/code-style.git"
+    },
+    "typesVersions": {
+        "*": {
+            "prettier/general": [
+                "src/prettier/general.d.ts"
+            ],
+            "prettier/tailwind": [
+                "src/prettier/tailwind.d.ts"
+            ]
+        }
+    },
+    "main": "./src/index.cjs",
+    "exports": {
+        ".": {
+            "import": "./src/index.js",
+            "require": "./src/index.cjs"
+        },
+        "./prettier": "./src/prettier/general.cjs",
+        "./prettier/general": {
+            "import": "./src/prettier/general.cjs",
+            "types": "./src/prettier/general.d.ts",
+            "require": "./src/prettier/general.cjs"
+        },
+        "./prettier/tailwind": {
+            "import": "./src/prettier/tailwind.cjs",
+            "types": "./src/prettier/tailwind.d.ts",
+            "require": "./src/prettier/tailwind.cjs"
+        },
+        "./biome": "./src/biome/biome.jsonc",
+        "./types": {
+            "types": "./src/types.d.ts"
+        }
+    },
+    "files": [
+        "src"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 0",
+        "release:preview": "np prerelease --any-branch --no-release-draft --tag=preview",
+        "build": "tsc",
+        "type-check": "tsc --noEmit",
+        "check": "pnpm run type-check",
+        "changeset": "changeset",
+        "bump": "changeset version",
+        "release": "changeset publish",
+        "prepublishOnly": "pnpm build"
+    },
+    "keywords": [],
+    "author": "Technance <dev@technance.com>",
+    "license": "MIT",
+    "dependencies": {
+        "@eslint/compat": "^1.4.1",
+        "@eslint/js": "^9.39.1",
+        "@next/eslint-plugin-next": "^15.5.6",
+        "@typescript-eslint/eslint-plugin": "^8.46.3",
+        "eslint-config-expo": "^9.2.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-import": "^2.32.0",
+        "eslint-plugin-jsonc": "^2.21.0",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "eslint-plugin-n": "^17.23.1",
+        "eslint-plugin-prettier": "^5.5.4",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^5.2.0",
+        "eslint-plugin-react-you-might-not-need-an-effect": "^0.4.7",
+        "eslint-plugin-sort-export-all": "^2.1.0",
+        "globals": "^16.5.0",
+        "jsonc-eslint-parser": "^2.4.1",
+        "typescript-eslint": "^8.46.3"
+    },
+    "peerDependencies": {
+        "eslint": "^9",
+        "prettier": "^3",
+        "prettier-plugin-tailwindcss": "^0.6.11"
+    },
+    "peerDependenciesMeta": {
+        "prettier-plugin-tailwindcss": {
+            "optional": true
+        }
+    }
+}
