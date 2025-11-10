@@ -171,9 +171,57 @@ const config = {
 module.exports = config;
 ```
 
+## Biome Configuration
+
+`@technance/code-style` provides a [Biome](https://biomejs.dev/) configuration for ultra-fast linting and formatting. Biome is a performant alternative to ESLint and Prettier, written in Rust.
+
+### Installation
+
+First, install Biome as a development dependency:
+
+```bash
+pnpm add @biomejs/biome -D
+```
+
+```bash
+npm install --save-dev @biomejs/biome
+```
+
+```bash
+yarn add -D @biomejs/biome
+```
+
+### Setup
+
+Create a `biome.json` or `biome.jsonc` file in your project root that extends the shared configuration:
+
+```json
+{
+    "extends": ["@technance/code-style/biome"],
+    "linter": {
+        "enabled": true
+    },
+    "formatter": {
+        "enabled": true
+    }
+}
+```
+
+### Configuration Details
+
+The shared Biome configuration includes:
+
+- **Formatter**: 4-space indentation, double quotes, 130 character line width
+- **Linter**: Enabled with recommended rules for React and general projects
+- **Import Organization**: Automatic import sorting with logical grouping
+- **Test Files**: Linting disabled for test files (`.test.ts`, `.spec.ts`, etc.)
+- **VCS Integration**: Git-aware with `.gitignore` support
+
+You can override any of these settings in your local `biome.json` file as needed.
+
 ## Customization
 
-You can further customize both ESLint and Prettier configurations by merging or overriding specific rules. This flexibility allows you to adhere to your coding conventions while benefiting from the solid defaults provided by `@technance/code-style`.
+You can further customize ESLint, Prettier, and Biome configurations by merging or overriding specific rules. This flexibility allows you to adhere to your coding conventions while benefiting from the solid defaults provided by `@technance/code-style`.
 
 ## License
 
