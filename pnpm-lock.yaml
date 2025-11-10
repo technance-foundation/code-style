@@ -46,6 +46,9 @@ importers:
 
   packages/code-style:
     dependencies:
+      '@biomejs/biome':
+        specifier: ^2
+        version: 2.3.4
       '@eslint/compat':
         specifier: ^1.4.1
         version: 1.4.1(eslint@9.21.0)
