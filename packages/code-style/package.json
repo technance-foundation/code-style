@@ -48,9 +48,6 @@
         "build": "tsc",
         "type-check": "tsc --noEmit",
         "check": "pnpm run type-check",
-        "changeset": "changeset",
-        "bump": "changeset version",
-        "release": "changeset publish",
         "prepublishOnly": "pnpm build"
     },
     "keywords": [],

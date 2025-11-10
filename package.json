@@ -4,6 +4,9 @@
     "packageManager": "pnpm@10.6.5",
     "scripts": {
         "build": "turbo run build",
+        "bump": "changeset version",
+        "changeset": "changeset",
+        "release": "changeset publish",
         "test": "turbo run test"
     },
     "devDependencies": {
