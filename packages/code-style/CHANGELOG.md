@@ -1,5 +1,11 @@
 # @technance/code-style
 
+## 1.5.1
+
+### Patch Changes
+
+- [#47](https://github.com/technance-foundation/code-style/pull/47) [`8d127d1`](https://github.com/technance-foundation/code-style/commit/8d127d14d79983ffe1bb86900bfb24d03bc18aab) Thanks [@afsoonaslanii](https://github.com/afsoonaslanii)! - Add @biomejs/biome to list of peer dependencies
+
 ## 1.5.0
 
 ### Minor Changes
