@@ -6,4 +6,4 @@ const prettier = {
     tailwind: prettierTailwind,
 };
 
-module.exports = { prettier, biome };
+module.exports = { prettier };
