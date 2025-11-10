@@ -1,5 +1,11 @@
 # @technance/code-style
 
+## 1.5.2
+
+### Patch Changes
+
+- [#51](https://github.com/technance-foundation/code-style/pull/51) [`31e871e`](https://github.com/technance-foundation/code-style/commit/31e871ed92391d32dcd7309e05d7800ec05d1f3a) Thanks [@afsoonaslanii](https://github.com/afsoonaslanii)! - Remove undefined biome export from module exports
+
 ## 1.5.1
 
 ### Patch Changes
