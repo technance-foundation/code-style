@@ -1,5 +1,11 @@
 # @technance/code-style
 
+## 1.5.3
+
+### Patch Changes
+
+- [#54](https://github.com/technance-foundation/code-style/pull/54) [`2f8a1f6`](https://github.com/technance-foundation/code-style/commit/2f8a1f6a41b571fac20d968a7dd7fcbb8eca3f77) Thanks [@inf1nite-lo0p](https://github.com/inf1nite-lo0p)! - Fix missing `@typescript-eslint` plugin in package.json ESLint config
+
 ## 1.5.2
 
 ### Patch Changes
