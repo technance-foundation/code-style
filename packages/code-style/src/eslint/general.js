@@ -81,6 +81,14 @@ export default tseslint.config(
         },
         plugins: {
             jsonc: jsoncPlugin,
+            /**
+             * NOTE: Explicitly include the @typescript-eslint plugin in this config block.
+             * In ESLint v9 (flat config), plugin scopes are isolated — plugins defined in other
+             * config objects (like the base TypeScript setup) are not automatically inherited.
+             * This ensures rules referencing "@typescript-eslint/*" don't throw
+             * "could not find plugin '@typescript-eslint'" errors within the package.json scope.
+             */
+            "@typescript-eslint": tseslint.plugin,
         },
         rules: {
             "@typescript-eslint/naming-convention": "off",
